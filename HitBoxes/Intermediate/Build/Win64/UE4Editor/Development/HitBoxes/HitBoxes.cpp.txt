@@ -1,0 +1,2 @@
+C:\GitHub Projects\HitBoxes\HitBoxes\Intermediate\Build\Win64\UE4Editor\Development\HitBoxes\Definitions.HitBoxes.h
+c:\github projects\hitboxes\hitboxes\source\hitboxes\HitBoxes.h

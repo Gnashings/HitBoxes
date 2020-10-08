@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "HitBoxes",
+			"Path": "C:\\GitHub Projects\\HitBoxes\\HitBoxes\\Source\\HitBoxes.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "HitBoxesEditor",
+			"Path": "C:\\GitHub Projects\\HitBoxes\\HitBoxes\\Source\\HitBoxesEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
