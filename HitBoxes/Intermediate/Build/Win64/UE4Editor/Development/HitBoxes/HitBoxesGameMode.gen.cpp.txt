@@ -1,9 +1,0 @@
-C:\GitHub Projects\HitBoxes\HitBoxes\Intermediate\Build\Win64\UE4Editor\Development\HitBoxes\Definitions.HitBoxes.h
-C:\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-C:\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\GitHub Projects\HitBoxes\HitBoxes\Source\HitBoxes/HitBoxesGameMode.h
-C:\UE_4.25\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-C:\UE_4.25\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-C:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-C:\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-c:\github projects\hitboxes\hitboxes\intermediate\build\win64\ue4editor\inc\hitboxes\HitBoxesGameMode.generated.h
