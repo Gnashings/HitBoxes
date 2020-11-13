@@ -41,8 +41,12 @@ AHitBoxesCharacter::AHitBoxesCharacter()
 	GetCharacterMovement()->MaxWalkSpeed = 600.f;
 	GetCharacterMovement()->MaxFlySpeed = 600.f;
 
-	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
-	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+	playerHealth = 1.0f; // Set player health to 100%
+
+	// Set player attack states to false
+	wasAttack1Used = false;
+	wasAttack2Used = false;
+	wasAttack3Used = false;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -54,6 +58,7 @@ void AHitBoxesCharacter::SetupPlayerInputComponent(class UInputComponent* Player
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AHitBoxesCharacter::MoveRight);
+	PlayerInputComponent->BindAction("TestDamage", IE_Pressed, this, &AHitBoxesCharacter::TestDamage);
 
 	PlayerInputComponent->BindAction("Attack1", IE_Pressed, this, &AHitBoxesCharacter::StartAttack1);
 	// Potential options for released attacks
@@ -86,23 +91,36 @@ void AHitBoxesCharacter::TouchStopped(const ETouchIndex::Type FingerIndex, const
 void AHitBoxesCharacter::StartAttack1()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Attack 1"));
+	wasAttack1Used = true;
 }
 
 void AHitBoxesCharacter::StartAttack2()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Attack 2"));
+	wasAttack2Used = true;
 }
 
 void AHitBoxesCharacter::StartAttack3()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Attack 3"));
+	wasAttack3Used = true;
 }
 
-/*
-void AHitBoxesCharacter::StartAttack4()
+void AHitBoxesCharacter::TestDamage()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Attack 3"));
+	TakeDamage(0.10f);
 }
-*/
+
+void AHitBoxesCharacter::TakeDamage(float damageTaken)
+{
+	UE_LOG(LogTemp, Warning, TEXT("Damage Taken, %f"), damageTaken);
+	playerHealth -= damageTaken;
+
+	if (playerHealth < 0.0f)
+	{
+		playerHealth = 0.0f;
+	}
+
+}
 
 

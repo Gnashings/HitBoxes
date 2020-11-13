@@ -22,7 +22,24 @@ class AHitBoxesCharacter : public ACharacter
 	void StartAttack1();
 	void StartAttack2();
 	void StartAttack3();
-	// void StartAttack4();
+	void TestDamage();
+	void TakeDamage(float damageTaken);
+	
+	/** Sets a Health Variable that can be Edited in Blueprints */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health", meta = (AllowPrivateAccess = "true"))
+	float playerHealth;
+
+	/** Did the player use Attack 1? */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attacks", meta = (AllowPrivateAccess = "true"))
+	bool wasAttack1Used;
+
+	/** Did the player use Attack 2? */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attacks", meta = (AllowPrivateAccess = "true"))
+	bool wasAttack2Used;
+
+	/** Did the player use Attack 3? */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attacks", meta = (AllowPrivateAccess = "true"))
+	bool wasAttack3Used;
 
 protected:
 
